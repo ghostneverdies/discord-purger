@@ -47,9 +47,8 @@ In both cases the token:
 Prebuilt binaries are published as a **zip archive** in the
 [Releases](https://github.com/ghostneverdies/discord-purger/releases) page.
 
-1. Download the latest `DiscordPurger-<version>.zip`.
-2. **Right-click → Properties → Unblock**, then extract it anywhere.
-3. Run `DiscordPurger.exe`.
+1. Download [DiscordPurger-v1.1.zip](https://github.com/ghostneverdies/discord-purger/releases/download/V1.1/DiscordPurger-v1.1.zip)
+2. Run `DiscordPurger.exe`.
 
 > No installation required. The app is **not persisted** anywhere by itself — delete the extracted
 > folder and it's gone.
@@ -63,9 +62,6 @@ Prebuilt binaries are published as a **zip archive** in the
 - **.NET 10 SDK** — [Download](https://dotnet.microsoft.com/download/dotnet/10.0)
 - **WebView2 Runtime** — [Download](https://developer.microsoft.com/microsoft-edge/webview2/) (preinstalled on Windows 11)
 - An internet connection
-
-**End users of the prebuilt release** only need the **.NET 10 Desktop Runtime** (framework-dependent
-build) plus WebView2 — the SDK is not required to run `DiscordPurger.exe`.
 
 > The frontend lives in `web/` (plain HTML/CSS/JS — no libraries) and is served by the WPF host
 > from a virtual host. Rebuild or edit the files in `web/` and re-run; the host copies them on build.
@@ -83,15 +79,6 @@ cd discord-purger
 dotnet restore
 dotnet run
 ```
-
-### 3. Build a release zip
-
-```bash
-dotnet publish -c Release
-```
-
-Zip the `bin/Release/net10.0-windows/publish/` output and ship it — that is exactly what the GitHub
-Releases zip contains.
 
 ---
 
